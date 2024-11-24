@@ -16,6 +16,7 @@ jobs:
       - name: Add remote 
         env:
           HF: ${{ secrets.HG }}
+        run: apt install git-lfs  
         run: git remote add space https://noahgift:$HF@huggingface.co/spaces/sudhakar272/Demo
       - name: Push to hub
         env:
