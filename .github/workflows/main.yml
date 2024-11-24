@@ -13,10 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Add remote
-        env:
-          HF: ${{ secrets.HG }}
-        run: apt install git-lfs  
+      - name: Add remote  
         env:
           HF: ${{ secrets.HG }}
         run: git remote add space https://noahgift:$HF@huggingface.co/spaces/sudhakar272/Demo
